@@ -13,10 +13,10 @@ function matchWinner(teamAGoals, teamBGoals) {
     }
 }
 
-let input1 = matchWinner(2,1);
-let input2 = matchWinner(1,3);
-let input3 = matchWinner(2,2);
-let input4 = matchWinner("3",2);
+// let input1 = matchWinner(2,1);
+// let input2 = matchWinner(1,3);
+// let input3 = matchWinner(2,2);
+// let input4 = matchWinner("3",2);
 
 // console.log(input1);
 // console.log(input2);
