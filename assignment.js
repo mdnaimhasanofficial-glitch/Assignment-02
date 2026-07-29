@@ -97,3 +97,26 @@ function topRatedRestaurant(restaurants) {
 
 
 // console.log(topRatedRestaurant([]));
+
+/* এই ফাংশনের সব বাগ খুঁজে ঠিক করো — নাম পরিবর্তন করবে না */
+function averageResponseTime(times) {
+    if(times.length === 0){
+        return "Invalid"
+    }
+    else if (!Array.isArray(times || times.length === 0 || typeof times !== "number")) {
+        return "Invalid";
+    }
+    
+let total = 0;
+
+    for (let i = 0; i < times.length; i++) {
+        total = total + times[i];
+    }
+
+return total / times.length;
+}
+// console.log(averageResponseTime([120, 200, 150, 130]));
+// console.log(averageResponseTime([100, 100]));
+// console.log(averageResponseTime([]));
+// console.log(averageResponseTime("logs"));
+// console.log(averageResponseTime(120, "200", 150));
