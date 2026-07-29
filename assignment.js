@@ -45,7 +45,27 @@ function isElevatorSafe(weights) {
     
 
 }
-console.log(isElevatorSafe([60, 75, 50]));
-console.log(isElevatorSafe([90, 100, 95, 120]));
-console.log(isElevatorSafe([400]));
-console.log(isElevatorSafe("60,75,50"));
+// console.log(isElevatorSafe([60, 75, 50]));
+// console.log(isElevatorSafe([90, 100, 95, 120]));
+// console.log(isElevatorSafe([400]));
+// console.log(isElevatorSafe("60,75,50"));
+
+
+// Third Problem
+
+function calculateAiCost(tokensUsed) {
+    // Write your code here.
+    let formula = 0;
+    if(typeof tokensUsed !== "number" || tokensUsed <= 0){
+        return "Invalid";
+    }
+    else if(tokensUsed >= 500){
+        formula = (tokensUsed - 500) / Math.floor(100) * 5;
+        // console.log(formula);
+    }
+    return formula;
+
+}
+// console.log(calculateAiCost(-1));
+// console.log(calculateAiCost(1000));
+// console.log(calculateAiCost("1000"));
