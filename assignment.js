@@ -29,19 +29,22 @@ let input4 = matchWinner("3",2);
 function isElevatorSafe(weights) {
     // Write your code here
     let totalWeight = 0;
+
+    if(!Array.isArray(weights)){
+        return "Invalid"
+    }
+
     for(let weight of weights){
         // console.log(weight);
         totalWeight += weight;
         // console.log(totalWeight);
     }
     // return totalWeight;
-    if(!Array.isArray(weights)){
-            return "Invalid"
-        }else if(totalWeight <= 400){
-            return true;
-        }else{
-            return false
-        }
+    if(totalWeight <= 400){
+        return true;
+    }else{
+        return false
+    }
     
 
 }
@@ -69,3 +72,28 @@ function calculateAiCost(tokensUsed) {
 // console.log(calculateAiCost(-1));
 // console.log(calculateAiCost(1000));
 // console.log(calculateAiCost("1000"));
+
+
+// Forth Problem
+
+
+function topRatedRestaurant(restaurants) {
+    // Write your code here
+    let highRating = 0;
+    let restaurantName = "";
+
+    if(!Array.isArray(restaurants) || restaurants.length === 0){
+            return "Invalid";
+        }
+
+    for (let restaurant of restaurants){
+    if(restaurant.rating >= highRating){
+            highRating = restaurant.rating;
+            restaurantName = restaurant.name;
+        }
+    }
+    return restaurantName.toUpperCase();
+}
+
+
+// console.log(topRatedRestaurant([]));
